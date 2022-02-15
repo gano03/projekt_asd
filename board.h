@@ -7,7 +7,7 @@
 
 class Board
 {
-    int ** tab;
+    public: int ** tab;
     public:Board (){
        this->tab = new int*[SIZE];
        for(int i = 0; i < SIZE; i++){
@@ -21,8 +21,9 @@ class Board
        display();
     }
     public:~Board (){
-        delete [] tab[0];
-        delete [] tab[1];
+        for(int i = 0; i < SIZE; i++){
+            delete [] tab[i];
+        }
         delete [] tab;
     }
     public:void display()
@@ -35,6 +36,11 @@ class Board
                 }
             }
         }
+        std::cout <<"\n\n";
+    }
+    public:void setShips()
+    {
+        
     }
 
 
