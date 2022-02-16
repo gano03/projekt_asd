@@ -4,7 +4,9 @@
 
 int main ()
 {
-    Board obj;
+    std::cout << "Trwa generowanie planszy. Proszę czekac...\n\n";
+    Board player;
+    Board enemy;
     //obj.display();
 
 

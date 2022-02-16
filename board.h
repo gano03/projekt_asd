@@ -3,6 +3,8 @@
 #define BOARD_H
 #include <stdio.h>
 #include <iostream>
+#include <ctime>
+#include <unistd.h>
 #include "ships.h"
 #define SIZE 10 //rozmiar planszy
 
@@ -56,6 +58,36 @@ class Board
         this->ship2->position(tab,3);
         this->ship3->position(tab,4);
         this->ship4->position(tab,5);
+    }
+    public:int defeat() // 1 porażka, 0 statki nadal istnieją
+    {
+        if((this->ship1->exist() == -1 && this->ship2->exist() == -1 && this->ship3->exist() == -1 &&
+        this->ship4->exist() == -1)){
+            return 1;
+        }
+        return 0;
+    }
+    public:void shot(Board &enemy)
+    {
+        int row, col;
+        std::cout << "Wybierz rzad i kolumne\n";
+        std::cin >> row;
+        std::cin >> col;
+        if(enemy.tab[row][col] == 1){
+            enemy.tab[row][col] = 8;
+        }
+        else{
+            enemy.tab[row][col] = 3;
+        }
+        
+    }
+    public:void enemy(Board &player)
+    {
+        srand(time(NULL));
+        int row = (std::rand()) % SIZE;
+        int col = (std::rand()) % SIZE;
+        
+
     }
 
 

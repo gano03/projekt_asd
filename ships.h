@@ -27,29 +27,29 @@ class Ships
         int row = (std::rand())%SIZE;
         int col = (std::rand())%SIZE;
         int opt = (std::rand())%2;
-        std::cout << "row to " <<row <<" col to " << col <<"\n";
-        std::cout << "opt to " << opt <<"\n";
+        //std::cout << "row to " <<row <<" col to " << col <<"\n";
+        //std::cout << "opt to " << opt <<"\n";
         if(tab[row][col] == 1){
             position(tab,ship_size);
             return;
         }
         switch(opt){
             case 0:
-                std::cout <<"Przypadek 0\n\n";
+                //std::cout <<"Przypadek 0\n\n";
                 if((row+ship_size) > (SIZE-1)){
-                    std::cout <<"Blad1\n\n";
+                    //std::cout <<"Blad1\n\n";
                     position(tab, ship_size);
                     return;
                 }
                 for(int i = row; i < (row+ship_size); i++){
-                    std::cout <<"Blad2\n\n";
+                    //std::cout <<"Blad2\n\n";
                     if(tab[i][col] == 1){
                         position(tab, ship_size);
                         return;
                     }
                 }
                 for(int i = row; i < (row+ship_size); i++){
-                    std::cout <<"Blad3\n\n";
+                    //std::cout <<"Blad3\n\n";
                     tab[i][col] = 1;
                 }
                 this->row = row;
@@ -57,7 +57,7 @@ class Ships
                 this->opt = opt;
                 break;
             case 1:
-                std::cout <<"Przypadek 1\n\n";
+                //std::cout <<"Przypadek 1\n\n";
                 if((col+ship_size) > (SIZE-1)){
                     position(tab, ship_size);
                     return;
@@ -97,9 +97,8 @@ class Ships
             }
         }
         return -1;
-
-
     }
+    
 
     
     
