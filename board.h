@@ -27,10 +27,10 @@ class Board
        }
         this->ship1 = new Ships(2, tab);
         this->ship2 = new Ships(3, tab);
-        this->ship3 = new Ships(3, tab);
+        this->ship3 = new Ships(4, tab);
         this->ship4 = new Ships(5, tab);
-       setShips();
-       display();
+        //setShips();
+        display();
     }
     public:~Board (){
         std::cout <<"Destruktor\n";
@@ -74,20 +74,13 @@ class Board
         std::cin >> row;
         std::cin >> col;
         if(enemy.tab[row][col] == 1){
+            std::cout << "Przeciwnik zostal trafion\n";
             enemy.tab[row][col] = 8;
         }
         else{
             enemy.tab[row][col] = 3;
         }
         
-    }
-    public:void enemy(Board &player)
-    {
-        srand(time(NULL));
-        int row = (std::rand()) % SIZE;
-        int col = (std::rand()) % SIZE;
-        
-
     }
 
 
