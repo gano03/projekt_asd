@@ -15,7 +15,7 @@ int main ()
     while(1)
     {
         player.display();
-        enemy_board.display(); 
+        //enemy_board.display(); 
         player.shot(enemy_board);
         if(enemy_board.defeat() == 1){
             std::cout << "Gracz wygral\n";

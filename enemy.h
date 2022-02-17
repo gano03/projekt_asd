@@ -21,6 +21,10 @@ class Enemy
             srand(time(NULL));
             this->row = (std::rand()) % SIZE;
             this->col = (std::rand()) % SIZE;
+            if(this->tab[this->row][this->col] == 3){
+                move();
+                return;
+            }
             if(this->tab[this->row][this->col] == 1){
                 std::cout <<"Zostales trafiony\n";
                 this->tab[this->row][this->col] = 8;
@@ -40,7 +44,6 @@ class Enemy
                 case 0:
                     this->row++;
                     if((this->row > SIZE-1) || (this->row < 0) || (this->tab[this->row][this->col] == 3)){
-                         std::cout <<"case 0\n";
                         this->row--;
                         break;
                     }
@@ -58,7 +61,6 @@ class Enemy
                  
                     this->row--;
                     if((this->row > SIZE-1) || (this->row < 0) || (this->tab[this->row][this->col] == 3)){
-                        std::cout <<"case 1\n";
                         this->row++;
                         break;
                     }
@@ -76,7 +78,6 @@ class Enemy
                  
                     this->col++;
                     if((this->row > SIZE-1) || (this->row < 0) || (this->tab[this->row][this->col] == 3)){
-                        std::cout <<"case 2\n";
                         this->col--;
                         break;
                     }
@@ -94,7 +95,6 @@ class Enemy
                  
                     this->col--;
                     if((this->row > SIZE-1) || (this->row < 0) || (this->tab[this->row][this->col] == 3)){
-                        std::cout <<"case 3\n";
                         this->col++;
                         break;
                     }

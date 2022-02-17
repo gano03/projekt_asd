@@ -33,7 +33,6 @@ class Board
         display();
     }
     public:~Board (){
-        std::cout <<"Destruktor\n";
         for(int i = 0; i < SIZE; i++){
             delete [] tab[i];
         }

@@ -80,8 +80,6 @@ class Ships
     }
     public:int exist() // 0 - statek jeszcze istnieje, -1 - statek juz zniszczony
     {
-        std::cout << "row to " <<row <<" col to " << col <<"\n";
-        std::cout << "opt to " << opt <<"\n";
         if(this->opt == 0){
             for(int i = this->row; i < this->row + this->ship_size; i++){
                if(tab[i][this->col] == 1){
@@ -98,7 +96,7 @@ class Ships
         }
         return -1;
     }
-    
+
 
     
     
