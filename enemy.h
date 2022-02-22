@@ -38,7 +38,7 @@ class Enemy
             }
         }
         while(1){
-            sleep(0.01);
+            usleep(50);
             int opt = (std::rand()) % 4;
             switch(opt){
                 case 0:

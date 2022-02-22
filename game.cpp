@@ -14,8 +14,11 @@ int main ()
 
     while(1)
     {
+        std::cout <<"Twoja plansza\n";
         player.display();
-        //enemy_board.display(); 
+        //enemy_board.display();
+        std::cout <<"Plansza przeciwnika\n"; 
+        enemy_board.displayEnemy();
         player.shot(enemy_board);
         if(enemy_board.defeat() == 1){
             std::cout << "Gracz wygral\n";

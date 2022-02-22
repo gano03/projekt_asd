@@ -37,12 +37,32 @@ class Board
             delete [] tab[i];
         }
         delete [] tab;
+        delete ship1;
+        delete ship2;
+        delete ship3;
+        delete ship4;
     }
     public:void display()
     {
         for(int i = 0; i < SIZE; i++){
             for( int j = 0; j < SIZE; j++){
                 std::cout << "   " << tab[i][j];
+                if(j == SIZE-1){
+                   std::cout<<"\n\n"; 
+                }
+            }
+        }
+        std::cout <<"\n\n";
+    }
+    public:void displayEnemy()
+    {
+        for(int i = 0; i < SIZE; i++){
+            for( int j = 0; j < SIZE; j++){
+                if(tab[i][j] == 1){
+                    std::cout << "   "<<0;
+                }
+                else
+                    std::cout << "   " << tab[i][j];
                 if(j == SIZE-1){
                    std::cout<<"\n\n"; 
                 }
@@ -72,12 +92,17 @@ class Board
         std::cout << "Wybierz rzad i kolumne\n";
         std::cin >> row;
         std::cin >> col;
+        if(row > SIZE-1 || row < 0 || col > SIZE-1 || col < 0){
+            shot(enemy);
+            return;
+        }
         if(enemy.tab[row][col] == 1){
             std::cout << "Przeciwnik zostal trafion\n";
             enemy.tab[row][col] = 8;
         }
         else{
             enemy.tab[row][col] = 3;
+            std::cout << "Pudlo\n";
         }
         
     }

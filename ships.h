@@ -22,7 +22,7 @@ class Ships
     }
     public:~Ships(){}
     public:void position(int **tab, int ship_size){
-        sleep(0.01);
+        usleep(50);
         srand(time(NULL));
         int row = (std::rand())%SIZE;
         int col = (std::rand())%SIZE;
@@ -35,9 +35,7 @@ class Ships
         }
         switch(opt){
             case 0:
-                //std::cout <<"Przypadek 0\n\n";
                 if((row+ship_size) > (SIZE-1)){
-                    //std::cout <<"Blad1\n\n";
                     position(tab, ship_size);
                     return;
                 }
@@ -49,7 +47,6 @@ class Ships
                     }
                 }
                 for(int i = row; i < (row+ship_size); i++){
-                    //std::cout <<"Blad3\n\n";
                     tab[i][col] = 1;
                 }
                 this->row = row;
@@ -57,7 +54,6 @@ class Ships
                 this->opt = opt;
                 break;
             case 1:
-                //std::cout <<"Przypadek 1\n\n";
                 if((col+ship_size) > (SIZE-1)){
                     position(tab, ship_size);
                     return;
@@ -76,7 +72,7 @@ class Ships
                 this->opt = opt;
                 break;
         } 
-        
+    
     }
     public:int exist() // 0 - statek jeszcze istnieje, -1 - statek juz zniszczony
     {
