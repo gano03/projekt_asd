@@ -7,6 +7,9 @@
 #include <unistd.h>
 #include "ships.h"
 #define SIZE 10 //rozmiar planszy
+#define SHIP 1
+#define SHIP_MISSED 3
+#define SHIP_HIT 8
 
 class Board
 {
@@ -78,13 +81,13 @@ class Board
         this->ship3->position(tab,4);
         this->ship4->position(tab,5);
     }
-    public:int defeat() // 1 porażka, 0 statki nadal istnieją
+    public:bool defeat() // 1 porażka, 0 statki nadal istnieją
     {
-        if((this->ship1->exist() == -1 && this->ship2->exist() == -1 && this->ship3->exist() == -1 &&
-        this->ship4->exist() == -1)){
-            return 1;
+        if(this->ship1->exist()&&this->ship2->exist()&& this->ship3->exist()&&
+        this->ship4->exist()){
+            return 0;
         }
-        return 0;
+        return 1;
     }
     public:void shot(Board &enemy)
     {
@@ -96,12 +99,12 @@ class Board
             shot(enemy);
             return;
         }
-        if(enemy.tab[row][col] == 1){
+        if(enemy.tab[row][col] == SHIP){
             std::cout << "Przeciwnik zostal trafion\n";
-            enemy.tab[row][col] = 8;
+            enemy.tab[row][col] = SHIP_HIT;
         }
         else{
-            enemy.tab[row][col] = 3;
+            enemy.tab[row][col] = SHIP_MISSED;
             std::cout << "Pudlo\n";
         }
         

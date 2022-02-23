@@ -7,6 +7,7 @@
 #include <ctime>
 #include <unistd.h>
 #define SIZE 10
+#define SHIP 1
 
 class Ships
 {
@@ -29,7 +30,7 @@ class Ships
         int opt = (std::rand())%2;
         //std::cout << "row to " <<row <<" col to " << col <<"\n";
         //std::cout << "opt to " << opt <<"\n";
-        if(tab[row][col] == 1){
+        if(tab[row][col] == SHIP){
             position(tab,ship_size);
             return;
         }
@@ -41,13 +42,13 @@ class Ships
                 }
                 for(int i = row; i < (row+ship_size); i++){
                     //std::cout <<"Blad2\n\n";
-                    if(tab[i][col] == 1){
+                    if(tab[i][col] == SHIP){
                         position(tab, ship_size);
                         return;
                     }
                 }
                 for(int i = row; i < (row+ship_size); i++){
-                    tab[i][col] = 1;
+                    tab[i][col] = SHIP;
                 }
                 this->row = row;
                 this->col = col;
@@ -59,13 +60,13 @@ class Ships
                     return;
                 }
                 for(int i = col; i < (col+ship_size); i++){
-                    if(tab[row][i] == 1){
+                    if(tab[row][i] == SHIP){
                         position(tab, ship_size);
                         return;
                     }
                 }
                 for(int i = col; i < (col+ship_size); i++){
-                    tab[row][i] = 1;
+                    tab[row][i] = SHIP;
                 }
                 this->row = row;
                 this->col = col;
@@ -74,23 +75,23 @@ class Ships
         } 
     
     }
-    public:int exist() // 0 - statek jeszcze istnieje, -1 - statek juz zniszczony
+    public:bool exist() // 1 - statek jeszcze istnieje, 0 - statek juz zniszczony
     {
         if(this->opt == 0){
             for(int i = this->row; i < this->row + this->ship_size; i++){
-               if(tab[i][this->col] == 1){
-                   return 0;
+               if(tab[i][this->col] == SHIP){
+                   return 1;
                } 
             }
         }
         else if(this->opt == 1){
             for(int i = this->col; i <this->col + this->ship_size; i++){
-                if(tab[this->row][i] == 1){
-                    return 0;
+                if(tab[this->row][i] == SHIP){
+                    return 1;
                 }
             }
         }
-        return -1;
+        return 0;
     }
 
 

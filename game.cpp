@@ -20,12 +20,12 @@ int main ()
         std::cout <<"Plansza przeciwnika\n"; 
         enemy_board.displayEnemy();
         player.shot(enemy_board);
-        if(enemy_board.defeat() == 1){
+        if(enemy_board.defeat()){
             std::cout << "Gracz wygral\n";
             break;
         }
         enemy.move();
-        if(player.defeat() == 1){
+        if(player.defeat()){
             std::cout <<"Komputer wygral\n";
             break;
         }
