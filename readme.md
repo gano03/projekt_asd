@@ -6,14 +6,14 @@ Uruchomienie gry:
 
     ./game.out - aby uruchomić grę
 
-Uwagi
+Uwagi:
 
     Po uruchomieniu gry nastąpi losowe generowanie planszy gracza i planszy przeciwnika. Ładowanie 
-    plansz 
-    może potrwać nawet kilkanaście sekund. W wypadku wystąpienia błędy "segmentation fault",
+    plansz może potrwać nawet kilkanaście sekund. W wypadku wystąpienia błędy "segmentation fault",
     proszę  uruchomić grę ponownie.
 
 Instrukcja:
+
     Po załadowaniu planszy pojawi się możliwość wykonania strzału w planszę gracza.
     Puste pola oznaczone są numerem 0.
     Pola, na których są statki oznaczone są numerem 1.
