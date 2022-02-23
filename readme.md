@@ -46,8 +46,9 @@ Klasa Enemy:
 
     move:
 
-    Odpowiada za strzał komputera. Losowana jest pozycja na planszy za pomocą funkcji rand.W przypadku
-    pomyślnego strzału przy kolejnym wywolaniu funkcji losowana jest pozycja w pobliżu tej trafionej.
+    Odpowiada za strzał komputera. Losowana jest pozycja na planszy za pomocą funkcji rand. W 
+    przypadku pomyślnego strzału przy kolejnym wywolaniu funkcji losowana jest pozycja 
+    w pobliżu tej trafionej.
 
 Klasa Board:
 
