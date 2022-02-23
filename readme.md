@@ -1,7 +1,9 @@
 Projekt - gra w statki.
 
-Uruchomienie gry
+Uruchomienie gry:
+
     make - aby skompilować program
+
     ./game.out - aby uruchomić grę
 
 Uwagi: 
