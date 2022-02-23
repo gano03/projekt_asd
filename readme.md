@@ -51,15 +51,16 @@ Klasa Enemy:
 
 Klasa Board:
 
-    W konstruktorze tworzona jest plansza (dynamiczna tablica) i tworzone są statki. Klasa Board odpowiada
-    za planszę. Destruktor usuwa planszę.
+    W konstruktorze tworzona jest plansza (dynamiczna tablica) i tworzone są statki. Klasa Board 
+    odpowiada za planszę. Destruktor usuwa planszę.
 
     Funkcje:
 
     display: odpowiada za wyświetlenie planszy.
     setships: odpowiada za rozmieszczenie wszystkich statków na planszy za pomocą funkcji position 
     z klasy Ships.
-    defeat: sprawdza czy statki jeszcze istnieją, jeśli nie to funckja zwraca 1 i gra zostaje zakończona.
+    defeat: sprawdza czy statki jeszcze istnieją, jeśli nie to funckja zwraca 1 i gra zostaje 
+    zakończona.
     shot: odpowiada za możliwość strzału w statek przeciwnika.
 
 
