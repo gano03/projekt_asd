@@ -14,8 +14,8 @@ Uwagi:
 
 Instrukcja:
 
-    Po załadowaniu planszy pojawi się możliwość wykonania strzału w planszę gracza.
-    Puste pola
+    Po załadowaniu planszy pojawi się możliwość wykonania strzału w planszę 
+    gracza Puste pola
     oznaczone
     są numerem 0. Pola, na których są statki oznaczone są numerem 1.Trafione statki zmieniają numer z 1 na 8.
     Statki na planszy są 4. Ich rozmiar to 2,3,4,5 kratek. Proszę podać odpowiednio numer rzędu i kolomny
