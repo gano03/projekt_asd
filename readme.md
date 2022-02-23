@@ -45,18 +45,20 @@ Klasa Enemy:
     Klasa odpowiada za ruch komputera.
 
     move:
-    Odpowiada za strzał komputera. Losowana jest pozycja na planszy za pomocą funkcji rand.
-    W przypadku pomyślnego strzału przy kolejnym wywolaniu funkcji losowana jest pozycja w pobliżu tej trafionej.
+
+    Odpowiada za strzał komputera. Losowana jest pozycja na planszy za pomocą funkcji rand.W przypadku
+    pomyślnego strzału przy kolejnym wywolaniu funkcji losowana jest pozycja w pobliżu tej trafionej.
 
 Klasa Board:
+
     W konstruktorze tworzona jest plansza (dynamiczna tablica) i tworzone są statki. Klasa Board odpowiada
     za planszę. Destruktor usuwa planszę.
 
     Funkcje:
 
     display: odpowiada za wyświetlenie planszy.
-    setships: odpowiada za rozmieszczenie wszystkich statków na planszy za pomocą funkcji position z klasy
-    Ships.
+    setships: odpowiada za rozmieszczenie wszystkich statków na planszy za pomocą funkcji position 
+    z klasy Ships.
     defeat: sprawdza czy statki jeszcze istnieją, jeśli nie to funckja zwraca 1 i gra zostaje zakończona.
     shot: odpowiada za możliwość strzału w statek przeciwnika.
 
