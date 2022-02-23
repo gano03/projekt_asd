@@ -26,12 +26,15 @@ Instrukcja:
 Program:
 
 Klasa Ships:
-    Klasa Ships odpowiada za statki. Do konstruktora przekazywany jest roamiar statku i tablica, na której będzie 
-    umieszczony.
+    Klasa Ships odpowiada za statki. Do konstruktora przekazywany jest roamiar statku i tablica,
+    na której będzie umieszczony.
+    
     Funkcje:
     
     position:
-    Funkcja odpowiada za umieszczenie statku na planszy w sposób losowy. Losowane jest row i col z przedziału od 0 do 9
+
+    Funkcja odpowiada za umieszczenie statku na planszy w sposób losowy. Losowane jest row i 
+    col z przedziału od 0 do 9
     za pomocą funkcji rand. Zmienna opt odpowiada za sposób w jaki budowane będą statki. 0 to wzdłuż wierszy. 1 to wzdłuż kolumn.W przypadku nie spełnienia jednego z warunków np nachodzenia na inny statek lub wyjścia poza planszę funkcja uruchamiana jest jeszcze raz.
 
     exist:
