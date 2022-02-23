@@ -61,7 +61,7 @@ class Board
     {
         for(int i = 0; i < SIZE; i++){
             for( int j = 0; j < SIZE; j++){
-                if(tab[i][j] == 1){
+                if(tab[i][j] == SHIP){
                     std::cout << "   "<<0;
                 }
                 else
