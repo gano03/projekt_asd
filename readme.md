@@ -15,12 +15,12 @@ Uwagi:
 Instrukcja:
 
     Po załadowaniu planszy pojawi się możliwość wykonania strzału w planszę gracza Puste pola
-    oznaczone
-    są numerem 0. Pola, na których są statki oznaczone są numerem 1.Trafione statki zmieniają numer z 1 na 8.
-    Statki na planszy są 4. Ich rozmiar to 2,3,4,5 kratek. Proszę podać odpowiednio numer rzędu i kolomny
-    z przedziału [0 - 9]. W przypadku celnego trafienia pojawi się odpowiedni komunikat, w przeciwnym
-    razie nie pojawi się żaden napis. Następnie ruch wykonuje komputer. W przypadku udanego trafienia pojawi
-    się komunikat o trafieniu naszego statku przez przeciwnika, a  statek zmieni numer z 1 na 8. Wygrywa ta
+    oznaczone są numerem 0. Pola, na których są statki oznaczone są numerem 1 Trafione 
+    statki zmieniają numer z 1 na 8. Statki na planszy są 4. Ich rozmiar to 2,3,4,5 kratek. 
+    Proszę podać odpowiednio numer rzędu i kolomny z przedziału [0 - 9]. W przypadku celnego 
+    trafienia pojawi się odpowiedni komunikat, w przeciwnym razie nie pojawi się żaden napis. 
+    Następnie ruch wykonuje komputer. W przypadku udanego trafienia pojawi się komunikat 
+    o trafieniu naszego statku przez przeciwnika, a  statek zmieni numer z 1 na 8.Wygrywa ta
     strona, która pierwsza zestrzeli wszystkie statki przeciwnika.
 
 Program:
