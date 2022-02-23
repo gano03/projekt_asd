@@ -6,9 +6,10 @@ Uruchomienie gry:
 
     ./game.out - aby uruchomić grę
 
-Uwagi:
+Uwagi
 
-    Po uruchomieniu gry nastąpi losowe generowanie planszy gracza i planszy przeciwnika. Ładowanie plansz 
+    Po uruchomieniu gry nastąpi losowe generowanie planszy gracza i planszy przeciwnika. Ładowanie 
+    plansz 
     może potrwać nawet kilkanaście sekund. W wypadku wystąpienia błędy "segmentation fault",
     proszę  uruchomić grę ponownie.
 
