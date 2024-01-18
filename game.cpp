@@ -6,26 +6,26 @@
 int main ()
 {
     std::cout << "Trwa generowanie planszy. Proszę czekac...\n\n";
-    Board player;
-    Board enemy_board;
-    Enemy enemy(player.tab);
-    player.setShips();
-    enemy_board.setShips();
+    Board * player = new Board();
+    Board *enemy_board = new EnemyBoard();
+    Enemy enemy(player->tab);
+    player->setShips();
+    enemy_board->setShips();
 
     while(1)
     {
         std::cout <<"Twoja plansza\n";
-        player.display();
+        player->display();
         //enemy_board.display();
         std::cout <<"Plansza przeciwnika\n"; 
-        enemy_board.displayEnemy();
-        player.shot(enemy_board);
-        if(enemy_board.defeat()){
+        enemy_board->display();
+        player->shot(*enemy_board);
+        if(enemy_board->defeat()){
             std::cout << "Gracz wygral\n";
             break;
         }
         enemy.move();
-        if(player.defeat()){
+        if(player->defeat()){
             std::cout <<"Komputer wygral\n";
             break;
         }

@@ -45,8 +45,9 @@ class Board
         delete ship3;
         delete ship4;
     }
-    public:void display()
+    public: virtual void display()
     {
+        std::cout << "bazowa\n";
         for(int i = 0; i < SIZE; i++){
             for( int j = 0; j < SIZE; j++){
                 std::cout << "   " << tab[i][j];
@@ -57,7 +58,7 @@ class Board
         }
         std::cout <<"\n\n";
     }
-    public:void displayEnemy()
+    /*public:void displayEnemy()
     {
         for(int i = 0; i < SIZE; i++){
             for( int j = 0; j < SIZE; j++){
@@ -72,7 +73,7 @@ class Board
             }
         }
         std::cout <<"\n\n";
-    }
+    }*/
     public:void setShips()
     {
 
@@ -110,6 +111,27 @@ class Board
         
     }
 
+
+};
+class EnemyBoard : public Board
+{
+    public:void display()
+    {
+        std::cout << "pochodna\n";
+       for(int i = 0; i < SIZE; i++){
+            for( int j = 0; j < SIZE; j++){
+                if(tab[i][j] == SHIP){
+                    std::cout << "   "<<0;
+                }
+                else
+                    std::cout << "   " << tab[i][j];
+                if(j == SIZE-1){
+                   std::cout<<"\n\n"; 
+                }
+            }
+        }
+        std::cout <<"\n\n"; 
+    }
 
 };
 #endif
